@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "5d02c124-2704-4884-a196-69937b163358",
+		"name": "postlist 作業HW6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "註冊",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"魯夫\",\r\n    \"email\":\"1a226a61a6@gmail.com\",\r\n    \"confirmPassword\":\"a1234567\",\r\n    \"password\":\"a1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mysterious-island-72460.herokuapp.com/users/sign_up",
+					"protocol": "https",
+					"host": [
+						"mysterious-island-72460",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登入",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"1a226a61a6@gmail.com\",\r\n    \"password\":\"a1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mysterious-island-72460.herokuapp.com/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"mysterious-island-72460",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "個人資料查詢",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTA5M2JmMjljNTUzZTQwZDViNjJhNSIsImlhdCI6MTY1MzY0MjI0MywiZXhwIjoxNjU0MjQ3MDQzfQ.gkzKKH12VE7lIDDZM_GzM5hOriGe-BcUnCb9weP2-qo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mysterious-island-72460.herokuapp.com/users/profile",
+					"protocol": "https",
+					"host": [
+						"mysterious-island-72460",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "密碼重置",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTA5M2JmMjljNTUzZTQwZDViNjJhNSIsImlhdCI6MTY1MzY0MjI0MywiZXhwIjoxNjU0MjQ3MDQzfQ.gkzKKH12VE7lIDDZM_GzM5hOriGe-BcUnCb9weP2-qo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"password\":\"a1234567\",\r\n\"confirmPassword\":\"a1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mysterious-island-72460.herokuapp.com/users/updatePassword",
+					"protocol": "https",
+					"host": [
+						"mysterious-island-72460",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改個人資料",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTA5M2JmMjljNTUzZTQwZDViNjJhNSIsImlhdCI6MTY1MzY0MjI0MywiZXhwIjoxNjU0MjQ3MDQzfQ.gkzKKH12VE7lIDDZM_GzM5hOriGe-BcUnCb9weP2-qo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"魯夫\",\r\n    \"photo\":\"https://sites.google.com/site/2017onepieceofcake/_/rsrc/1484057610111/3/1.jpg?height=400&width=400\",\r\n    \"sex\":\"male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mysterious-island-72460.herokuapp.com/users/profile",
+					"protocol": "https",
+					"host": [
+						"mysterious-island-72460",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
